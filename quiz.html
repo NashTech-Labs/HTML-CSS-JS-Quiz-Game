@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Quiz Game
+    </title>
+    <link rel="stylesheet" href="styles/quiz.css">
+  </head>
+  <body>
+    <header class="header"> <!--The header contains the question, the score, and the mistakes allowed features-->
+      <p class="js-question question"></p>
+      <p class="js-score score"></p>
+      <p class="js-allowed-mistakes allowed-mistakes"></p>
+    </header>
+
+    <section class="answers"> <!--In this section we have two divs: each one is a line with two buttons, with a possible answer in each button.-->
+      <div>
+        <button class="js-1-answer first-answer" onclick="
+          showAnswer(questionList[questionIndex], 1);
+        ">
+        </button>
+  
+        <button class="js-2-answer second-answer" onclick="
+          showAnswer(questionList[questionIndex], 2);
+        ">
+        </button>
+      </div>
+  
+      <div>
+        <button class="js-3-answer third-answer" onclick="
+          showAnswer(questionList[questionIndex], 3);
+        ">
+        </button>
+  
+        <button class="js-4-answer forth-answer" onclick="
+          showAnswer(questionList[questionIndex], 4);
+        ">
+        </button>
+      </div>
+  
+    </section>
+    
+    <!--This button restarts the game. all relevant variables are set accordingly, and the game starts from the first question (again).-->
+    <button onclick="
+      localStorage.setItem('questionIndex', JSON.stringify(questionIndex = 0));
+      localStorage.setItem('score', JSON.stringify(score = 0));
+      localStorage.setItem('isFirstGuess', JSON.stringify(isFirstGuess = true));
+      localStorage.setItem('allowedMistakes', JSON.stringify(allowedMistakes = 3));
+      localStorage.setItem('wrongAnswerList', JSON.stringify(wrongAnswerList = []));
+    " class="restart-button"><a href="quiz.html" class="restart-button-a-element">Restart game</a>
+    </button>
+
+    <!--Shows wheather the chosen answer was correct or incorrect-->
+    <p class="js-result result"></p>
+
+    <script src="scripts/quiz.js"></script>
+  </body>
+</html>

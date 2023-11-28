@@ -1,0 +1,146 @@
+body {
+  font-family: Arial;
+}
+
+p, div {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.question {
+  font-size: 32px;
+}
+
+.score {
+  display: inline-block;
+  position: absolute;
+  left: 1328px;
+  top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.allowed-mistakes {
+  display: inline-block;
+  position: absolute;
+  left: 1294px;
+  top: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.first-answer, .second-answer, .third-answer, .forth-answer {
+  font-size: 32px;
+  color: white;
+  height: 200px;
+  width: 400px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s,
+  font-weight 0.15s;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button:active {
+  font-weight: bold;
+}
+
+.first-answer, .second-answer, .third-answer, .forth-answer {
+  margin: 16px 12px;
+}
+
+.first-answer {
+  background-color: rgb(2010, 200, 0);
+}
+
+.second-answer {
+  background-color: green;
+}
+
+.third-answer {
+  background-color: blue;
+}
+
+.forth-answer {
+  background-color: red;
+}
+
+/*This class is added to the incorrect answers that were answerd*/
+.wrongAnswer {
+  background-color: white;
+  cursor: auto;
+}
+
+.restart-button {
+  position: absolute;
+  font-size: 24px;
+  background-color: white;
+  color: white;
+  margin-left: 1296px;
+  margin-top: 87px;
+  border: none;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: white;
+  cursor: default;
+  opacity: 1;
+}
+
+.restart-button:active {
+  font-weight: normal;
+}
+
+.restart-button-a-element {
+  text-decoration: none;
+  color: white;
+  padding: 37px 28px;
+  background-color: black;
+}
+
+.restart-button-a-element:hover {
+  opacity: 1;
+}
+
+.restart-button-a-element:active {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  padding: 37px 24px;
+  background-color: black;
+}
+
+.result {
+  margin-top: 64px;
+  font-size: 32px;
+}
+
+/*The text is shown at the end of the game*/
+.end-of-the-game {
+  font-size: 32px;
+}
+
+/*The button is shown at the end of the game*/
+.play-again-button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  margin-left: -100px ;
+  margin-top: -20px;
+  font-size: 24px;
+  line-height: 98px;
+  border: none;
+  cursor: pointer;
+}

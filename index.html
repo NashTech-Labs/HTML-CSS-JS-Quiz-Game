@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Quiz Game
+    </title>
+    <link rel="stylesheet" href="styles/index.css">
+  </head>
+  <body>
+    <p class="welcome-paragraph">Welcome to this quiz game!</p>
+    <button><a href="quiz.html" class="start-playing-button" onclick ="
+      localStorage.setItem('questionIndex', JSON.stringify(questionIndex = 0));
+      localStorage.setItem('score', JSON.stringify(score = 0));
+      localStorage.setItem('isFirstGuess', JSON.stringify(isFirstGuess = true));
+      localStorage.setItem('allowedMistakes', JSON.stringify(allowedMistakes = 3));
+      localStorage.setItem('wrongAnswerList', JSON.stringify(wrongAnswerList = []));
+      ">Start playing</a>
+    </button>
+  </body>
+</html>
